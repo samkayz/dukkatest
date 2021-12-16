@@ -122,11 +122,11 @@ DATABASES = {
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT')
+        'NAME': "heroku_107466f2eb97a70",
+        'USER': "b1b1747d16b663",
+        'PASSWORD': "3a54dee3",
+        'HOST': "us-cdbr-east-05.cleardb.net",
+        'PORT': "3306"
     }
 }
 
