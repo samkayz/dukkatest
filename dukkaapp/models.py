@@ -75,5 +75,5 @@ class Reciepts(models.Model):
      
      def get_receipt_url(self):
           if self.receipt:
-               return 'https://www.dukkatest.herokuapp.com' + self.receipt.url
+               return 'http://www.dukkatest.herokuapp.com' + self.receipt.url
           return ''
