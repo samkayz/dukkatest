@@ -3,6 +3,7 @@ from rest_framework import status
 from .models import User
 from rest_framework.views import APIView
 from rest_framework.decorators import permission_classes
+from .serializers import userSerializer
 
 
 
@@ -31,3 +32,9 @@ class UsersManager(APIView):
                    "email": user.email 
                }
                return Response(data=resp, status=status.HTTP_200_OK)
+     
+     def get(self, request):
+          snippet = User.objects.filter()
+          serialize = userSerializer(instance=snippet, many=True)
+          return Response(data=serialize.data, status=status.HTTP_200_OK)
+          
