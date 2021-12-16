@@ -4,6 +4,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 from .create_receipt import GenerateReceipt, FilterReceipt
+from .user_manager import UsersManager
 
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
@@ -11,4 +12,5 @@ urlpatterns = [
     path('generate', GenerateReceipt.as_view(), name='generate_receipt'),
     path('all', GenerateReceipt.as_view(), name='all'),
     path('filter/<str:receiptId>', FilterReceipt.as_view(), name='filter'),
+    path('users/', UsersManager.as_view(), name='users'),
 ]
